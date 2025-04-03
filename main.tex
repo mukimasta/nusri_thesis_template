@@ -1,0 +1,57 @@
+\documentclass[12pt,oneside]{nusthesis}
+
+\usepackage{lipsum}  % For dummy text
+
+\title{Your Thesis Title}
+\author{Your Name}
+\degreeyear{May 2025}
+\degree{Bachelor of Engineering}
+% \prevdegrees{B.Eng., National University of Singapore, 2018}
+\supervisor{Professor Supervisor Name}
+\cosupervisor{Professor Co-supervisor Name} % Optional, comment out if not needed
+% \anothercosupervisor{Professor Another Co-supervisor Name} % Optional
+\field{Major}
+\department{Department of Engineering}
+\homeuniversity{Your Home University}
+\declaredate{June 1, 2023}
+% \declaresign{signature.png} % Optional, path to signature image
+
+
+\begin{document}
+
+\begin{frontmatter}
+
+    \maketitle
+
+    % \declarationpage % Optional, uncomment if needed
+
+    \begin{abstract}
+    \input{chapter/abstract}
+    \end{abstract}
+
+    \dedicate{To my family and friends, for their support and encouragement.}
+
+    \begin{acknowledgments}
+    \input{chapter/acknowledgments}
+    \end{acknowledgments}
+
+    \tableofcontents
+    \listoffigures
+    \listoftables
+
+\end{frontmatter}
+
+\input{chapter/chapter1}
+\input{chapter/chapter2}
+\input{chapter/chapter3}
+\input{chapter/chapter4}
+\input{chapter/chapter5}
+
+\begin{thebibliography}{99}
+\input{chapter/bibliography}
+\end{thebibliography}
+
+\appendix
+\input{chapter/appendix}
+
+\end{document}
