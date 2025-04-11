@@ -163,6 +163,11 @@
 \renewcommand\listoftables{\begin{SingleSpace}\memoirlistoftables
   \end{SingleSpace}}
 
+\newcommand\listofsymbolsandabbreviations{}
+\let\memoirlistofsymbolsandabbreviations=\listofsymbolsandabbreviations
+\renewcommand\listofsymbolsandabbreviations{\begin{SingleSpace}\memoirlistofsymbolsandabbreviations
+  \end{SingleSpace}}
+
 
 % Customized names:
 \newcommand\acknowledgename{Acknowledgments}
@@ -438,6 +443,15 @@
   \@mkboth{List of Tables}{List of Tables}
   \addcontentsline{toc}{chapter}{List of Tables}
   \@starttoc{lot}
+}
+
+\renewcommand{\listofsymbolsandabbreviations}{
+  \intendclearpage
+  \phantomsection
+  \chapter*{List of Symbols and Abbreviations}
+  \@mkboth{List of Symbols and Abbreviations}{List of Symbols and Abbreviations}
+  \addcontentsline{toc}{chapter}{List of Symbols and Abbreviations}
+  \@starttoc{losa}
 }
 
 \chapterstyle{default}
